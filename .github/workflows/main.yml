@@ -29,5 +29,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "vasin-github-exercise-03"
+          heroku_app_name: "vasin-github-exercise-04"
           heroku_email: "61160230@go.buu.ac.th"
