@@ -12,3 +12,13 @@ jobs:
           who-to-greet: 'Mona the Octocat'
       - name: Get the output time'
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+          deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "vasin-github-exercise-03"
+          heroku_email: "61160230@go.buu.ac.th"
